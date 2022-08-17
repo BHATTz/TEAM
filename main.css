@@ -4,3 +4,9 @@
     url("img/B1.jpg") center/cover no-repeat;
   color: #fff;
 }
+.space {
+  word-spacing: 90px;
+  width: 10px;
+  height: auto;
+  display: inline-block;
+}
