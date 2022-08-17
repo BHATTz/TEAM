@@ -4,9 +4,16 @@
     url("img/B1.jpg") center/cover no-repeat;
   color: #fff;
 }
+<<<<<<< HEAD
+
+.text-head{
+  color:#000;
+}
+=======
 .space {
   word-spacing: 90px;
   width: 10px;
   height: auto;
   display: inline-block;
 }
+>>>>>>> 4dfc4ca6b587d75b5a3fb1dc9f78739abd08a506
