@@ -7,3 +7,9 @@
 .text-head {
   color: #000;
 }
+
+.imgg{
+  height: 400px;
+  width: 800px;
+  border-radius: 100px;
+}
