@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="main.css" />
   </head>
   <body>
+    <!-- header -->
+
     <header class="text-gray-400 bg-gray-900 body-font">
       <div
         class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
@@ -23,8 +26,8 @@
         <nav
           class="md:ml-auto flex flex-wrap items-center text-base justify-center"
         >
-          <a class="mr-5 hover:text-white" a href="farmer.html">About Us</a>
-          <a class="mr-5 hover:text-white" a href="business.html">Tips</a>
+          <a class="mr-5 hover:text-white" a href="aboutus.html">About Us</a>
+          <a class="mr-5 hover:text-white" a href="tips.html">Tips</a>
           <a class="mr-5 hover:text-white" a href="team.html">Team</a>
         </nav>
 
@@ -64,6 +67,8 @@
 =======
     </header>
 >>>>>>> 9c4d11d88c718ca2fe318f6388988dd6f3662c41
+
+    <!-- content -->
 
     <section class="text-gray-600 body-font">
       <div class="container px-5 py-24 mx-auto flex flex-wrap items-center">
@@ -113,8 +118,21 @@
             Literally you probably haven't heard of them jean shorts.
           </p>
         </div>
+        <br />
+        <p class="text-2xl text-gray-500 mt-1">
+          Don't Have An Account?<br />
+          Please first Register your self.
+        </p>
+        <div class="space"></div>
+        <button
+          class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+        >
+          <a href="reg.html">Register</a>
+        </button>
       </div>
     </section>
+
+    <!-- Footer -->
 
     <footer class="text-gray-400 bg-gray-900 body-font">
       <div class="container px-5 py-24 mx-auto">
@@ -165,20 +183,20 @@
             <h2
               class="title-font font-medium text-white tracking-widest text-sm mb-3"
             >
-              CATEGORIES
+              TEAMS
             </h2>
             <nav class="list-none mb-10">
               <li>
-                <a class="text-gray-400 hover:text-white">First Link</a>
+                <a class="text-gray-400 hover:text-white">Sarthak Bhatt</a>
               </li>
               <li>
-                <a class="text-gray-400 hover:text-white">Second Link</a>
+                <a class="text-gray-400 hover:text-white">Ritik Rana</a>
               </li>
               <li>
-                <a class="text-gray-400 hover:text-white">Third Link</a>
+                <a class="text-gray-400 hover:text-white">Gaurav</a>
               </li>
               <li>
-                <a class="text-gray-400 hover:text-white">Fourth Link</a>
+                <a class="text-gray-400 hover:text-white">Sonu</a>
               </li>
             </nav>
           </div>
@@ -195,7 +213,7 @@
                 <label
                   for="footer-field"
                   class="leading-7 text-sm text-gray-400"
-                  >Placeholder</label
+                  >Enter email</label
                 >
                 <input
                   type="text"
@@ -207,12 +225,12 @@
               <button
                 class="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded"
               >
-                Button
+                Submit
               </button>
             </div>
             <p class="text-gray-500 text-sm mt-2 md:text-left text-center">
-              Bitters chicharrones fanny pack
-              <br class="lg:block hidden" />waistcoat green juice
+              Subscribe to our newsletter to get
+              <br class="lg:block hidden" />updated for latest news.
             </p>
           </div>
         </div>
@@ -224,30 +242,21 @@
           <a
             class="flex title-font font-medium items-center md:justify-start justify-center text-white"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              class="w-10 h-10 text-white p-2 bg-green-500 rounded-full"
-              viewBox="0 0 24 24"
+            <a href="index.html" class="active">
+              <img src="img/photography.png" alt="logo" height="50" width="50"
+            /></a>
+            <span class="ml-3 text-xl"
+              ><a href="index.html" class="active">YourDailydDairyCart</a></span
             >
-              <path
-                d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
-              ></path>
-            </svg>
-            <span class="ml-3 text-xl">Tailblocks</span>
           </a>
           <p class="text-sm text-gray-400 sm:ml-6 sm:mt-0 mt-4">
-            © 2020 Tailblocks —
+            © 2022 SGGS Team 3 —
             <a
               href="https://twitter.com/knyttneve"
               class="text-gray-500 ml-1"
               target="_blank"
               rel="noopener noreferrer"
-              >@knyttneve</a
+              >@YourDailydDairyCart</a
             >
           </p>
           <span
