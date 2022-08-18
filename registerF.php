@@ -40,7 +40,7 @@
           >
         </a>
         <nav
-          class="md:ml-auto flex flex-wrap items-center text-base justify-center"
+          class="md:ml-auto flex flex-wrap items-center text-base justify-center font-serif"
         >
           <a class="mr-5 hover:text-white" a href="aboutus.html">About Us</a>
           <a class="mr-5 hover:text-white" a href="tips.html">Tips</a>
@@ -48,7 +48,7 @@
         </nav>
 
         <button
-          class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0"
+          class=" font-serif inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0"
         >
           <a href="http://127.0.0.1:5500/login.html">Login</a>
           <svg
@@ -197,7 +197,7 @@
       </div>
     </section>
     <!-- footer -->
-
+   <hr>
     <footer class="text-gray-400 bg-gray-900 body-font">
       <div class="container px-5 py-24 mx-auto">
         <div class="flex flex-wrap md:text-left text-center order-first">
@@ -257,7 +257,7 @@
                 <a class="text-gray-400 hover:text-white">Ritik Rana</a>
               </li>
               <li>
-                <a class="text-gray-400 hover:text-white">Gaurav</a>
+                <a class="text-gray-400 hover:text-white">Gaurav kumar</a>
               </li>
               <li>
                 <a class="text-gray-400 hover:text-white">Sonu</a>
