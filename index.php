@@ -29,9 +29,9 @@
         <nav
           class="md:ml-auto flex flex-wrap items-center text-base justify-center font-serif"
         >
-          <a class="mr-5 hover:text-white" a href="aboutus.php">About Us</a>
-          <a class="mr-5 hover:text-white" a href="tips.html">Tips</a>
-          <a class="mr-5 hover:text-white" a href="team.html">Team</a>
+          <a class="mr-5 hover:text-white"href="aboutus/second">About Us</a>
+          <a class="mr-5 hover:text-white"href="tips.html">Tips</a>
+          <a class="mr-5 hover:text-white"href="team.html">Team</a>
         </nav>
 
         <button
@@ -244,13 +244,13 @@
             </h2>
             <nav class="list-none mb-10">
               <li>
-                <a class="mr-5 hover:text-white" a href="aboutus.html#second">ABOUT US</a>
+                <a class="mr-5 hover:text-white"href="aboutus.php">ABOUT US</a>
               </li>
               <li>
-              <a class="mr-5 hover:text-white" a href="tips.html">TIPS</a>
+              <a class="mr-5 hover:text-white"href="tips.html">TIPS</a>
             </li>
             <li>
-          <a class="mr-5 hover:text-white" a href="team.html">TEAM</a>
+          <a class="mr-5 hover:text-white"href="team.html">TEAM</a>
         </li>
         <li>
         <button class="inline-flex items-center focus:outline-none mr-5 hover:text-white"
