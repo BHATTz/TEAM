@@ -187,7 +187,7 @@
         $milk_qty = $_POST['milk_qty'];
         $user_id = $_POST['user_id'];
         $password = $_POST['password'];
-        $query = "insert into far(name,phone,state,city,email,qty,userid,passoword)values('$name','$phone','$state','$city','$email','$milk_qty','$user_id','$password')";
+        $query = "insert into far(name,phone,state,city,email,qty,userid,password)values('$name','$phone','$state','$city','$email','$milk_qty','$user_id','$password')";
         $fire=mysqli_query($con,$query);
         if($fire)
         {
@@ -196,6 +196,7 @@
               alert("data inserted successfully");
           </script>
           <?php
+          header('Location: login.html');
         }else{
           ?>
           <script>
