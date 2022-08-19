@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `far`
 --
 
-CREATE TABLE `far` (
+CREATE TABLE 'far' (
   `srno` int(10) NOT NULL,
   `name` varchar(30) NOT NULL,
   `phone` int(10) NOT NULL,
@@ -46,7 +46,7 @@ CREATE TABLE `far` (
 --
 -- Indexes for table `far`
 --
-ALTER TABLE `far`
+ALTER TABLE 'far'
   ADD PRIMARY KEY (`srno`);
 
 --
@@ -56,7 +56,7 @@ ALTER TABLE `far`
 --
 -- AUTO_INCREMENT for table `far`
 --
-ALTER TABLE `far`
+ALTER TABLE 'far'
   MODIFY `srno` int(10) NOT NULL AUTO_INCREMENT;
 COMMIT;
 

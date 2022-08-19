@@ -93,7 +93,7 @@
             <div class="p-2 w-1/2">
               <div class="relative">
                 <label for="state" class="leading-7 text-base text-gray-300"
-                  >State/City:</label
+                  >State:</label
                 >
                 <input
                   type="text"
@@ -185,11 +185,25 @@
         $city = $_POST['city'];
         $email = $_POST['email'];
         $milk_qty = $_POST['milk_qty'];
-        $userid = $_POST['user_id'];
+        $user_id = $_POST['user_id'];
         $password = $_POST['password'];
-        $query = "INSERT INTO `far` (`name`, `phone`, `state`, `city`, `email`, `qty`, `userid`, `password`) VALUES ('$name', '$phone', '$state', `$city`, `$email`, `$milk_qty`, `$userid`, `$password`)";
-        $fire = mysqli_query($conn,$query) or die("Cannot insert ".mysqli_error($conn));
-    }
+        $query = "insert into far(name,phone,state,city,email,qty,userid,passowrd)values('$name','$phone','$state','$city','$email','$milk_qty','$user_id','$password')";
+        $fire=mysqli_query($con,$query);
+        if($fire)
+        {
+          ?>
+          <script>
+              alert("data inserted successfully");
+          </script>
+          <?php
+        }else{
+          ?>
+          <script>
+              die("data not inserted successfully");
+          </script>
+          <?php
+        }
+    } 
        ?>
       </div>
     </section>
