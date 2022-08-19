@@ -167,10 +167,7 @@
               population. gDairying has become an important secondary source of
               income for millions of rural families and has assumed the most
               important role in providing employment and income generating
-              opportunities particularly for marginal and women farmers. There
-              is a need of Developing a mobile App for online processing and
-              registration of dairy farmers producing milk and other livestock
-              products organically. Such an app may help provide market linkage.
+              opportunities particularly for marginal and women farmers.
             </a>
           </div>
         </div>
