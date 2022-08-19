@@ -1,20 +1,4 @@
-<!-- <?php
-    include 'conn.php';
-    if(isset($_POST['submit']))
-    {
-        $name = $_POST['name'];
-        $phone = $_POST['phone'];
-        $state = $_POST['state'];
-        $pincode = $_POST['pincode'];
-        $email = $_POST['email'];
-        $milk_qty = $_POST['milk_qty'];
-        $userid = $_POST['user_id'];
-        $password = $_POST['password'];
-        $query = "INSERT INTO `farmer` (`name`, `phone`, `state`, `pincode`, `email`, `qty`, `userid`, `password`) VALUES ('$name', '$phone', '$state', `$pincode`, `$email`, `$milk_qty`, `$userid`, `$password`)";
-        $fire = mysqli_query($conn,$query) or die("Cannot insert ".mysqli_error($conn));
-        if($fire){
-           
-       ?> -->
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -77,11 +61,7 @@
             Register As Farmer
           </h1>
         </div>
-         <h2><?php echo("Submitted successfully");  }
-    }
-    
-    ?></h2>
-        <form>
+        <form method="post" action="registerF.php">
         <div class="lg:w-1/2 md:w-2/3 mx-auto">
           <div class="flex flex-wrap -m-2">
             <div class="p-2 w-1/2">
@@ -190,11 +170,27 @@
             </div>
             <div class="p-2 w-full"></div>
             <div class="p-2 w-full">
-              <input type="button" name="submit" value="Submit" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+              <input type="submit" name="submit" value="Submit" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
             </div>
           </div>
         </div>
         </form>
+        <?php
+    include 'conn.php';
+    if(isset($_POST['submit']))
+    {
+        $name = $_POST['name'];
+        $phone = $_POST['phone'];
+        $state = $_POST['state'];
+        $pincode = $_POST['pincode'];
+        $email = $_POST['email'];
+        $milk_qty = $_POST['milk_qty'];
+        $userid = $_POST['user_id'];
+        $password = $_POST['password'];
+        $query = "INSERT INTO `far` (`name`, `phone`, `state`, `pincode`, `email`, `qty`, `userid`, `password`) VALUES ('$name', '$phone', '$state', `$pincode`, `$email`, `$milk_qty`, `$userid`, `$password`)";
+        $fire = mysqli_query($conn,$query) or die("Cannot insert ".mysqli_error($conn));
+    }
+       ?>
       </div>
     </section>
     <!-- footer -->
