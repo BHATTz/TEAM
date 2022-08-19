@@ -167,10 +167,7 @@
               population. gDairying has become an important secondary source of
               income for millions of rural families and has assumed the most
               important role in providing employment and income generating
-              opportunities particularly for marginal and women farmers. There
-              is a need of Developing a mobile App for online processing and
-              registration of dairy farmers producing milk and other livestock
-              products organically. Such an app may help provide market linkage.
+              opportunities particularly for marginal and women farmers.
             </a>
           </div>
         </div>
@@ -320,6 +317,7 @@
             gentrify.
           </p>
         </div>
+        <form method="post" action="aboutus.php">
         <div class="lg:w-1/2 md:w-2/3 mx-auto">
           <div class="flex flex-wrap -m-2">
             <div class="p-2 w-1/2">
@@ -354,6 +352,7 @@
                   >Message</label
                 >
                 <textarea
+                  type="textbox"
                   id="message"
                   name="message"
                   class="w-full bg-gray-300 rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
@@ -361,14 +360,39 @@
               </div>
             </div>
             <div class="p-2 w-full">
-              <button
-                class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+          
+            <input type="submit" name="submit" value="Submit" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
               >
-                Button
-              </button>
             </div>
           </div>
         </div>
+      </div>
+    </form>
+        <?php
+    include 'conn.php';
+    if(isset($_POST['submit']))
+    {
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $message = $_POST['message'];
+        $query = "insert into cont(Name,Email,Message)values('$name','$email','$message')";
+        $fire=mysqli_query($con,$query);
+        if($fire)
+        {
+          ?>
+          <script>
+              alert("data inserted successfully");
+          </script>
+          <?php
+        }else{
+          ?>
+          <script>
+              alert("data not inserted successfully");
+          </script>
+          <?php
+        }
+    } 
+       ?>
       </div>
     </section>
 
