@@ -199,7 +199,7 @@
         }else{
           ?>
           <script>
-              die("data not inserted successfully");
+              alert("data not inserted successfully");
           </script>
           <?php
         }
