@@ -19,11 +19,11 @@
         <a
           class="flex title-font font-serif items-center text-white mb-4 md:mb-0"
         >
-          <a href="index.html" class="active">
+          <a href="index.php" class="active">
             <img src="img/photography.png" alt="logo" height="50" width="50"
           /></a>
           <span class="ml-3 text-xl"
-            ><a href="index.html" class="active">YourDailydDairyCart</a></span
+            ><a href="index.php" class="active">YourDailydDairyCart</a></span
           >
         </a>
         <nav
@@ -254,7 +254,7 @@
         </li>
         <li>
         <button class="inline-flex items-center focus:outline-none mr-5 hover:text-white"
-         a href="http://127.0.0.1:5500/login.html">Login</a>
+         a href="http://127.0.0.1:5500/login.php">Login</a>
           <svg
             fill="none"
             stroke="currentColor"
@@ -310,7 +310,7 @@
               </div>
               <button
                 class="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded"
-              ><a href="http://127.0.0.1:5500/aboutus.html">Press Me</a>
+              ><a href="aboutus.php">Press Me</a>
              </button>
             </div>
           </div>
@@ -327,17 +327,12 @@
               <img src="img/photography.png" alt="logo" height="50" width="50"
             /></a>
             <span class="ml-3 text-xl"
-              ><a href="index.html" class="active">YourDailydDairyCart</a></span
+              ><a href="index.php" class="active">YourDailydDairyCart</a></span
             >
           </a>
           <p class="text-sm text-gray-400 sm:ml-6 sm:mt-0 mt-4">
             © 2022 SGGS Team 3 —
-            <a
-              href="https://twitter.com/knyttneve"
-              class="text-gray-500 ml-1"
-              target="_blank"
-              rel="noopener noreferrer"
-              >@YourDailydDairyCart</a
+            <a>@YourDailydDairyCart</a
             >
           </p>
           <span
