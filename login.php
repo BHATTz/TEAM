@@ -76,8 +76,22 @@
           class="lg:w-2/1 md:w-1/2 bg-gray-800 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0"
         >
           <h2 class="text-white text-lg font-medium title-font mb-5">
-            Sign Up
+            Sign In
           </h2>
+          <div class="relative mb-4">
+            <label for="type:" class="leading-7 text-sm text-white"
+              >Select type:</label
+            >
+            <select
+              type="opt"
+              id="opt"
+              name="opt"
+              class="w-full bg-gray-300 rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            />
+            <option value="farmer">farmer</option>
+            <option value="business">business</option>
+             </select>
+            </div>
           <div class="relative mb-4">
             <label for="full-name" class="leading-7 text-sm text-white"
               >Full Name</label
@@ -114,25 +128,28 @@
      {
          $userid = $_POST['userid'];
          $password = $_POST['password'];
-         $user_search="select * from far where userid='$userid' ";
-         $user_search1="select * from bus where userid='$userid' ";
+         $option = $_POST['opt'];
+         switch($option)
+         {
+          case "business":
+         $user_search="select * from bus where userid='$userid' ";
          $query=mysqli_query($con,$user_search);
         
         $user_count=mysqli_num_rows($query);
          if($user_count)
          {
            $user_pass=mysqli_fetch_assoc($query);
-           $db_pass=$user_pass['passowrd'];
+           $db_pass=$user_pass['password'];
          if($password===$db_pass)
          {
            ?>
            <script>
                alert("login successfully");
-              location.replace("farmer.php");
+              location.replace("business.php");
            </script>
            <?php
          }
-         }else{
+         else{
           ?>
           <script>
           alert("incorrect password");
@@ -146,8 +163,43 @@
            </script>
            <?php
         }
+      break;
+      case "farmer":
+        $user_search="select * from far where userid='$userid' ";
+        $query=mysqli_query($con,$user_search);
+       
+       $user_count=mysqli_num_rows($query);
+        if($user_count)
+        {
+          $user_pass=mysqli_fetch_assoc($query);
+          $db_pass=$user_pass['passowrd'];
+        if($password===$db_pass)
+        {
+          ?>
+          <script>
+              alert("login successfully");
+             location.replace("farmer.php");
+          </script>
+          <?php
+        }
+        else{
+         ?>
+         <script>
+         alert("incorrect password");
+         </script>
+         <?php
+        }
+       }else{
+         ?>
+          <script>
+              alert("invalid username");
+          </script>
+          <?php
+       }
+       break;
+      }
      } 
-      
+    
 
 
 
@@ -184,7 +236,7 @@
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-width="2"
-            class="w-4 h-4 ml-1"
+            class="w-4 h-4 ml-1"   
             viewBox="0 0 24 24"
           >
             <path d="M5 12h14M12 5l7 7-7 7"></path>

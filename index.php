@@ -29,7 +29,7 @@
         <nav
           class="md:ml-auto flex flex-wrap items-center text-base justify-center font-serif"
         >
-          <a class="mr-5 hover:text-white"href="aboutus/second">About Us</a>
+          <a class="mr-5 hover:text-white"href="aboutus.php">About Us</a>
           <a class="mr-5 hover:text-white"href="tips.html">Tips</a>
           <a class="mr-5 hover:text-white"href="team.html">Team</a>
         </nav>
@@ -37,7 +37,7 @@
         <button
           class="font-serif inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0"
         >
-          <a href="login.html">Login</a>
+          <a href="login.php">Login</a>
           <svg
             fill="none"
             stroke="currentColor"
