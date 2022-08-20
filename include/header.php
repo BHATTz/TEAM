@@ -26,8 +26,8 @@
           class="md:ml-auto flex flex-wrap items-center text-base justify-center font-serif"
         >
           <a class="mr-5 hover:text-white"href="aboutus.php">About Us</a>
-          <a class="mr-5 hover:text-white"href="tips.html">Tips</a>
-          <a class="mr-5 hover:text-white"href="team.html">Team</a>
+          <a class="mr-5 hover:text-white"href="tips.php">Tips</a>
+          <a class="mr-5 hover:text-white"href="team.php">Team</a>
         </nav>
 
         <button

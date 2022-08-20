@@ -22,14 +22,14 @@
                 <a class="mr-5 hover:text-white"href="aboutus.php">ABOUT US</a>
               </li>
               <li>
-              <a class="mr-5 hover:text-white"href="tips.html">TIPS</a>
+              <a class="mr-5 hover:text-white"href="tips.php">TIPS</a>
             </li>
             <li>
-          <a class="mr-5 hover:text-white"href="team.html">TEAM</a>
+          <a class="mr-5 hover:text-white"href="team.php">TEAM</a>
         </li>
         <li>
         <button class="inline-flex items-center focus:outline-none mr-5 hover:text-white"
-         a href="http://127.0.0.1:5500/login.php">Login</a>
+         a href="login.php">Login</a>
           <svg
             fill="none"
             stroke="currentColor"
