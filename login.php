@@ -76,7 +76,7 @@
           class="lg:w-2/1 md:w-1/2 bg-gray-800 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0"
         >
           <h2 class="text-white text-lg font-medium title-font mb-5">
-            Sign In
+            Login In
           </h2>
           <div class="relative mb-4">
             <label for="type:" class="leading-7 text-sm text-white"
@@ -87,14 +87,15 @@
               id="opt"
               name="opt"
               class="w-full bg-gray-300 rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-            />
+            >
+            <option value="#">Select</option>
             <option value="farmer">farmer</option>
             <option value="business">business</option>
              </select>
             </div>
           <div class="relative mb-4">
             <label for="full-name" class="leading-7 text-sm text-white"
-              >Full Name</label
+              >User Id</label
             >
             <input
               type="text"
@@ -114,10 +115,6 @@
               class="w-full bg-gray-300 rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
-          <input type="submit"name="submit" value="Submit" class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
-          >
-            Login
-          </input>
           <button
           class="text-xs text-gray-500 mt-3">forgot Password -></button>
       </div>
@@ -172,7 +169,7 @@
         if($user_count)
         {
           $user_pass=mysqli_fetch_assoc($query);
-          $db_pass=$user_pass['passowrd'];
+          $db_pass=$user_pass['password'];
         if($password===$db_pass)
         {
           ?>
