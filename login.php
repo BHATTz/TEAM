@@ -76,7 +76,7 @@
           class="lg:w-2/1 md:w-1/2 bg-gray-800 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0"
         >
           <h2 class="text-white text-lg font-medium title-font mb-5">
-            Sign Up
+            Sign In
           </h2>
           <div class="relative mb-4">
             <label for="full-name" class="leading-7 text-sm text-white"
