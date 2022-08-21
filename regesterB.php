@@ -155,7 +155,7 @@
         {
           ?>
           <script>
-              alert("data inserted successfully");
+              location.replace("login.php");
           </script>
           <?php
         }else{
