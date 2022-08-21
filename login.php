@@ -87,7 +87,7 @@
               id="opt"
               name="opt"
               class="w-full bg-gray-300 rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-            />
+            >
             <option value="none">select</option>
             <option value="farmer">farmer</option>
             <option value="business">business</option>
