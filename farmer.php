@@ -20,7 +20,7 @@
       $query = mysqli_query($con,$search);
         
         $user_count = mysqli_num_rows($query);
-          while($user_count)
+          for($i =0; $i < $user_count; $i++)
           {
             $details = mysqli_fetch_assoc($query);
             $userid = $details['userid'];
