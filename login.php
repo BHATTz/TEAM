@@ -101,12 +101,7 @@
            $db_pass=$user_pass['password'];
          if($password===$db_pass)
          {
-           ?>
-           <script>
-               alert("login successfully");
-              location.replace("farmer.php");
-           </script>
-           <?php
+          location.replace("farmer.php");
          }
          else{
           ?>
