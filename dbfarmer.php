@@ -37,9 +37,12 @@
             <p class="text-base">@haryana</p>
           </div>
           <br><br>
+          <a href="business.php">
           <div class="p-2 w-full">
-              <input type="submit" name="submit" value="Available companies" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-            </div>          
+             <input type="submit" name="submit" value="Available companies" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+            </div> 
+          </a>
+                   
     
         </div>
         <div class="text-gray-600 body-font relative">
