@@ -15,6 +15,22 @@
 
     <!-- content -->
 
+    <?php
+    include("conn.php");
+      $user_search="select * from bus where userid='$userid' ";
+         $query=mysqli_query($con,$user_search);
+        
+        $user_count=mysqli_num_rows($query);
+         if($user_count)
+         {
+            $details = mysqli_fetch_assoc($query);
+            $userid = $details['userid'];
+            $name = $details['name'];
+            $phone = $details['phone'];
+            $email = $details['email'];
+            $city = $details['city'];
+            $qty = $details['qty'];
+    ?>
     <section class="text-gray-600 body-font">
       <div class="flex flex-col sm:flex-row mt-10">
      
@@ -33,8 +49,8 @@
               <input type="submit" name="submit" value="Upload photo" class="flex mx-auto text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded text-lg">
             </div>
             <div class="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div>
-            <p class="text-base">Farmer Name</p>
-            <p class="text-base">@haryana</p>
+            <p class="text-base"><?php echo"$name";?></p>
+            <p class="text-base"><?php echo "@".$userid;?></p>
           </div>
           <br><br>
           <a href="business.php">
@@ -66,7 +82,7 @@
                 <input
                   type="text"
                   id="name"
-                  name="name"
+                  name="<?php echo "$name";?>"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -172,6 +188,9 @@
         </form>
   </div>
        </section> 
+       <?php 
+        }
+    ?>
  
  <!-- footer -->
 
