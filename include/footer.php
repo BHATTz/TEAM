@@ -28,7 +28,9 @@
           <a class="mr-5 hover:text-white"href="team.php">TEAM</a>
         </li>
         <li>
-        <button class="inline-flex items-center focus:outline-none mr-5 hover:text-white" a href="login.php">Login</a>
+        <a href="login.php">Login
+        <button class="inline-flex items-center focus:outline-none mr-5 hover:text-white">
+         
           <svg
             fill="none"
             stroke="currentColor"
@@ -41,6 +43,7 @@
             <path d="M5 12h14M12 5l7 7-7 7"></path>
           </svg>
         </button>
+      </a>
         </li>
         </nav>
             </nav>
