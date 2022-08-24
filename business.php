@@ -74,7 +74,8 @@
       </div>
     </section>
     <?php
-          }}
+          }
+        }
     ?>
 
     <!-- footer -->
