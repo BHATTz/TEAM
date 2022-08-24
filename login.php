@@ -131,7 +131,7 @@
         if($user_count)
         {
           $user_pass=mysqli_fetch_assoc($query);
-          $db_pass=$user_pass['passowrd'];
+          $db_pass=$user_pass['password'];
         if($password===$db_pass)
         {
           ?>
