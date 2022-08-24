@@ -33,13 +33,16 @@
               <input type="submit" name="submit" value="Upload photo" class="flex mx-auto text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded text-lg">
             </div>
             <div class="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div>
-            <p class="text-base">Farmer dummy</p>
+            <p class="text-base">Farmer Name</p>
             <p class="text-base">@haryana</p>
           </div>
           <br><br>
+          <a href="business.php">
           <div class="p-2 w-full">
-              <input type="submit" name="submit" value="Available companies" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-            </div>          
+             <input type="submit" name="submit" value="Available companies" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+            </div> 
+          </a>
+                   
     
         </div>
         <div class="text-gray-600 body-font relative">
@@ -97,7 +100,7 @@
             <div class="p-2 w-1/2">
               <div class="relative">
                 <label for="pincode" class="leading-7 text-base text-gray-300"
-                  >city:</label
+                  >City:</label
                 >
                 <input
                   type="text"
