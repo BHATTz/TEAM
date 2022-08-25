@@ -22,7 +22,6 @@
             ><a href="index.php" class="active">YourDailydDairyCart</a></span
           >
         </a>
-        &nav
         <nav
           class="md:ml-auto flex flex-wrap items-center text-base justify-center font-serif"
         >

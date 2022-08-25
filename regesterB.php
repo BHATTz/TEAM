@@ -77,33 +77,7 @@
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
-            </div>
-            <div class="p-2 w-1/2">
-              <div class="relative">
-                <label for="milk_qty" class="leading-7 text-base text-gray-300"
-                  >Required Qty:</label
-                >
-                <input
-                  type="text"
-                  id="qty"
-                  name="qty"
-                  class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                />
-              </div>
-            </div>
-            <div class="p-2 w-1/2">
-              <div class="relative">
-                <label for="price" class="leading-7 text-base text-gray-300"
-                  >Fixed Price/kg:</label
-                >
-                <input
-                  type="text"
-                  id="price"
-                  name="price"
-                  class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                />
-              </div>
-            </div>
+            </div>          
             <div class="p-2 w-1/2">
               <div class="relative">
                 <label for="user_id" class="leading-7 text-base text-gray-300"
@@ -145,11 +119,9 @@
         $phone = $_POST['phone'];
         $email = $_POST['email'];
         $address = $_POST['address'];
-        $qty = $_POST['qty'];
-        $price = $_POST['price'];
         $user_id = $_POST['user_id'];
         $password = $_POST['password'];
-        $query = "insert into bus(name,phone,email,address,qty,price,userid,password)values('$name','$phone','$email','$address','$qty','$price','$user_id','$password')";
+        $query = "insert into bus(name,phone,email,address,userid,password)values('$name','$phone','$email','$address','$user_id','$password')";
         $fire=mysqli_query($con,$query);
         if($fire)
         {

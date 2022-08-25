@@ -69,17 +69,14 @@ session_start();
              <input type="submit" name="submit" value="Available companies" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
             </div> 
           </a>
-                   
-    
-        </div>
-        <div class="text-gray-600 body-font relative">
+          </div>
+        
       <div class="container px-5 py-24 mx-auto">
-      <br><br><br><br>
         <div class="flex flex-col text-center w-full mb-8">
           <h1
-            class="sm:text-2xl text-2xl font-medium title-font mb-2 text-blue-200"
+            class="sm:text-3xl text-2xl font-medium title-font mb-2 text-blue-200"
           >
-            Fields to Update
+            Register As Farmer
           </h1>
         </div>
         <form method="post" action="registerF.php">
@@ -94,7 +91,6 @@ session_start();
                   type="text"
                   id="name"
                   name="name"
-                  value="<?php echo $name;?>"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -108,7 +104,6 @@ session_start();
                   type="text"
                   id="phone"
                   name="phone"
-                  value="<?php echo $phone;?>"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -122,7 +117,6 @@ session_start();
                   type="text"
                   id="state"
                   name="state"
-                  value="<?php echo $state;?>"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -130,42 +124,26 @@ session_start();
             <div class="p-2 w-1/2">
               <div class="relative">
                 <label for="pincode" class="leading-7 text-base text-gray-300"
-                  >City:</label
-                >
-                <input
-                  type="text"
-                  id="city"
-                  name="city"
-                  value="<?php echo $city;?>"
-                  class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                />
-              </div>
-            </div>
-            <div class="p-2 w-1/2">
-              <div class="relative">
-                <label for="email" class="leading-7 text-base text-gray-300"
                   >Email Id:</label
                 >
                 <input
-                  type="email"
+                  type="text"
                   id="email"
                   name="email"
-                  value="<?php echo $email;?>"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
             </div>
-            <div class="p-2 w-1/2">
+            <div class="p-10 w-2/2">
               <div class="relative">
-                <label for="milk_qty" class="leading-7 text-base text-gray-300"
-                  >Milk Qty:</label
+                <label for="email" class="leading-7 text-base text-gray-300"
+                  >Full address/PIN code:</label
                 >
                 <input
-                  type="text"
-                  id="milk_qty"
-                  name="milk_qty"
-                  value="<?php echo $qty;?>"
-                  class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  type="textbox"
+                  id="address"
+                  name="address"
+                  class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-24 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
             </div>
@@ -178,7 +156,6 @@ session_start();
                   type="text"
                   id="user_id"
                   name="user_id"
-                  value="<?php echo $userid;?>"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -192,20 +169,17 @@ session_start();
                   type="password"
                   id="password"
                   name="password"
-                  value="<?php echo $password;?>"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
             </div>
             <div class="p-2 w-full"></div>
             <div class="p-2 w-full">
-              <input type="submit" name="submit" value="Update" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+              <input type="submit" name="submit" value="Submit" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
             </div>
           </div>
-</div>
         </div>
         </form>
-  </div>
        </section> 
        <?php 
         }
