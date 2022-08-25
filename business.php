@@ -32,7 +32,7 @@
           <button
           class="font-serif inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0"
         >
-          <a href="#">Profile</a>
+          <a href="dbbusiness.php">Profile</a>
         </nav>
         &nbsp;&nbsp;
 
@@ -72,7 +72,6 @@
             $phone = $details['phone'];
             $email = $details['email'];
             $address = $details['address'];
-            $qty = $details['qty'];
     ?>
 
     <section class="text-gray-600 body-font overflow-hidden">
@@ -88,7 +87,7 @@
             </h1>
             <div class="flex mb-4">
               <a class="flex-grow border-b-2 border-gray-100 py-2 text-lg px-1"
-                >Information</a
+                >Address</a
               >
             </div>
             <p class="leading-relaxed mb-4">
@@ -99,15 +98,18 @@
               <span class="ml-auto text-gray-100 mr-5">Cows</span>
             </div>
             <div class="flex border-t border-b mb-6 border-gray-200 py-2 ">
-              <span class="text-white ml-5">Product Quantity</span>
-              <span class="ml-auto text-gray-100 mr-5"> <?php echo $qty;?> KG</span>
+              <span class="text-white ml-5">Per Day Production</span>
+              <span class="ml-auto text-gray-100 mr-5"> KG</span>
             </div>
             <div class="flex">
               <span class="title-font font-medium text-3xl text-white-200"
                 ></span
               >
               <div class="flex ml-auto text-white border-0 py-2 px-6">
-              <?php echo $phone." , ".$email;?>
+              <a href="tel:<?php echo $phone.","?>"><?php echo $phone.""?></a>
+              &nbsp;&nbsp;
+                <a href="mailto:<?php echo $email.","?>"><?php echo $email.""?></a>
+ 
                 </div>
             </div>
           </div>

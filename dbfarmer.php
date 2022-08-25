@@ -74,6 +74,7 @@ session_start();
             </svg>
           </div>
         
+        
           <div class="flex flex-col items-center text-center justify-center">
             <h2 class="font-medium title-font mt-4 text-gray-900 text-lg">Phoebe Caulfield</h2>
             <div class="p-2 w-full">
@@ -112,6 +113,7 @@ session_start();
                   id="name"
                   name="name"
                   value="<?php echo $array['name'];?>"
+                  value="<?php echo $array['name'];?>"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -125,6 +127,7 @@ session_start();
                   type="text"
                   id="phone"
                   name="phone"
+                  value="<?php echo $array['phone'];?>"
                   value="<?php echo $array['phone'];?>"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
@@ -140,6 +143,7 @@ session_start();
                   id="state"
                   name="state"
                   value="<?php echo $array['state'];?>"
+                  value="<?php echo $array['state'];?>"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -154,6 +158,7 @@ session_start();
                   id="email"
                   name="email"
                   value="<?php echo $array['email'];?>"
+                  value="<?php echo $array['email'];?>"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -167,6 +172,7 @@ session_start();
                   type="textbox"
                   id="address"
                   name="address"
+                  value="<?php echo $array['address'];?>"
                   value="<?php echo $array['address'];?>"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-24 leading-8 transition-colors duration-200 ease-in-out"
                 />
@@ -195,6 +201,7 @@ session_start();
                   type="password"
                   id="password"
                   name="password"
+                  value="<?php echo $array['password'];?>"
                   value="<?php echo $array['password'];?>"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
