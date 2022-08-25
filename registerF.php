@@ -67,7 +67,7 @@
             <div class="p-2 w-1/2">
               <div class="relative">
                 <label for="pincode" class="leading-7 text-base text-gray-300"
-                  >city:</label
+                  >Email Id:</label
                 >
                 <input
                   type="text"
@@ -77,29 +77,16 @@
                 />
               </div>
             </div>
-            <div class="p-2 w-1/2">
+            <div class="p-10 w-2/2">
               <div class="relative">
                 <label for="email" class="leading-7 text-base text-gray-300"
-                  >Email Id:</label
+                  >Full address/PIN code:</label
                 >
                 <input
                   type="email"
                   id="email"
                   name="email"
-                  class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                />
-              </div>
-            </div>
-            <div class="p-2 w-1/2">
-              <div class="relative">
-                <label for="milk_qty" class="leading-7 text-base text-gray-300"
-                  >Milk Qty:</label
-                >
-                <input
-                  type="text"
-                  id="milk_qty"
-                  name="milk_qty"
-                  class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-24 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
             </div>
