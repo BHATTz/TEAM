@@ -106,9 +106,9 @@
                 ></span
               >
               <div class="flex ml-auto text-white border-0 py-2 px-6">
-              <a href="tel:<?php echo $phone.","?>"><?php echo $phone.""?></a>
+              <a href="tel:<?php echo $phone.""?>"><?php echo $phone.""?></a>
               &nbsp;&nbsp;
-                <a href="mailto:<?php echo $email.","?>"><?php echo $email.""?></a>
+                <a href="mailto:<?php echo $email.""?>"><?php echo $email.""?></a>
  
                 </div>
             </div>
