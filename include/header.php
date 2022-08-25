@@ -10,7 +10,7 @@
     
 <header class="text-gray-400 bg-gray-900 body-font">
       <div
-        class="container mx-auto flex flex-wrap p-1 flex-col md:flex-row items-center"
+        class="container mx-auto flex flex-wrap p-4 flex-col md:flex-row items-left"
       >
         <a
           class="flex title-font font-serif items-center text-white mb-4 md:mb-0"
@@ -22,6 +22,7 @@
             ><a href="index.php" class="active">YourDailydDairyCart</a></span
           >
         </a>
+        &nav
         <nav
           class="md:ml-auto flex flex-wrap items-center text-base justify-center font-serif"
         >
