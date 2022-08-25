@@ -93,11 +93,13 @@ session_start();
          $userid = $_POST['userid'];
          $password = $_POST['password'];
          $option = $_POST['opt'];
-         $_SESSION['username']= $userid;
+         $_SESSION['user']=$userid;
+      
+         
          switch($option)
          {
           case "business":
-         $user_search="select * from bus where userid='$userid' ";
+         $user_search="select * from bus where userid='$userid'";
          $query=mysqli_query($con,$user_search);
         
         $user_count=mysqli_num_rows($query);
@@ -106,13 +108,14 @@ session_start();
            $user_pass=mysqli_fetch_assoc($query);
            
            $db_pass=$user_pass['password'];
+           
          if($password===$db_pass)
          {
           ?>
            <script>
           
             
-               location.replace("dbfarmer.php");
+               location.replace("farmer.php");
            </script>
            <?php
          }
@@ -140,12 +143,14 @@ session_start();
         {
           $user_pass=mysqli_fetch_assoc($query);
           $db_pass=$user_pass['password'];
+          
+          
         if($password===$db_pass)
         {
           ?>
           <script>
               
-             location.replace("farmer.php");
+             location.replace("dbfarmer.php");
           </script>
           <?php
         }
