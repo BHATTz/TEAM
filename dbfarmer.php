@@ -17,7 +17,7 @@
 
     <?php
     include("conn.php");
-      $user_search="select * from bus where userid='$userid' ";
+      $user_search="select * from bus where userid='$userid'";
          $query=mysqli_query($con,$user_search);
         
         $user_count=mysqli_num_rows($query);
