@@ -101,7 +101,11 @@
            $db_pass=$user_pass['password'];
          if($password===$db_pass)
          {
-          location.replace("farmer.php");
+          ?>
+           <script>
+               location.replace("business.php");
+           </script>
+           <?php
          }
          else{
           ?>
