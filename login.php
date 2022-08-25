@@ -94,6 +94,7 @@ session_start();
          $password = $_POST['password'];
          $option = $_POST['opt'];
          $_SESSION['user']=$userid;
+         
       
          
          switch($option)

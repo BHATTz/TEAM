@@ -20,46 +20,46 @@ session_start();
 
     <!-- content -->
     <?php
+    include 'conn.php';
     error_reporting(0);
     $userid = $_SESSION['user'];
-    echo $userid;
-    include("conn.php");
-    
-  
-        /* $user_search="select * from far where userid='$userid'";
-         $query=mysqli_query($con,$user_search);
+    $user_search="select * from far where userid='$userid'";
+    $query=mysqli_query($con,$user_search);
 
-        
-        $array=mysqli_fetch_array($query);
-         if(isset($_POST['submit']))
-         {    
-        
-          $name = $_POST['name'];
-          $phone = $_POST['phone'];
-            $state = $_POST['state'];
-            $email = $_POST['email'];
-            $address =$_POST['address'];
-            $userid = $_POST['userid'];
-            $password = $_POST['password'];
-            $update="update far set name='$name',phone='$phone',state='$state',email='$email',address='$address',userid='$userid',password='$password' where srno=$srno";
-             $fire=mysqli_query($con,$update);
-             if($fire)
-             {
-               ?>
-               <script>
-                   location.replace("updated successfully");
-                </script>
-               <?php
-             }else{
-               ?>
-               <script>
-                   alert("data not inserted successfully");
-               </script>
-               <?php
-             }
-            }
-            */
-    ?>
+   
+   $array=mysqli_fetch_array($query);
+   
+   if(isset($_POST['submit']))
+   {  
+     $name = $_POST['name'];
+     $phone = $_POST['phone'];
+       $state = $_POST['state'];
+       $email = $_POST['email'];
+       $address =$_POST['address'];
+       $userid = $_POST['userid'];
+       $password = $_POST['password'];
+       
+       $update="update far set name='$name',phone='$phone',state='$state',email='$email',address='$address',userid='$userid',password='$password' where userid='$userid'";
+        $fire=mysqli_query($con,$update);
+        if($fire)
+        {
+          ?>
+          <script>
+              alert("updated successfully");
+           </script>
+          <?php
+        }else{
+          ?>
+          <script>
+              alert("data not inserted successfully");
+          </script>
+          <?php
+        }
+       }
+       
+            
+    ?>  
+   
   
     <section class="text-gray-600 body-font">
       <div class="flex flex-col sm:flex-row mt-10">
@@ -99,7 +99,7 @@ session_start();
             Register As Farmer
           </h1>
         </div>
-        <form method="POST" action="dbfarmer.php">
+        <form method="POST"action="dbfarmer.php">
         <div class="lg:w-1/2 md:w-2/3 mx-auto">
           <div class="flex flex-wrap -m-2">
             <div class="p-2 w-1/2">
@@ -181,7 +181,7 @@ session_start();
                   type="text"
                   id="userid"
                   name="userid"
-                  value="<?php echo $array['userid'];?>"
+                  value="<?php echo $userid;?>"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -209,7 +209,7 @@ session_start();
         </form>
        </section> 
        
-        
+      
   
  
  <!-- footer -->
