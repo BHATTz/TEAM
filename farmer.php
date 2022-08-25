@@ -27,12 +27,16 @@
             $email = $details['email'];
             $price = $details['price'];
             $qty = $details['qty'];
+            $srno = $details['srno'];
+            
+           
     ?>
-
+     <a href="provide.php?id=<?php echo $srno;?>"></a>
     <!-- content -->   
     <section class="text-gray-600 body-font overflow-hidden">
       <div class="container px-5 py-24 mx-auto">
         <div class="lg:w-4/5 mx-auto flex flex-wrap">
+          <?php echo $srno;?>
           <div class="lg:w-4/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
             <h2 class="text-sm title-font text-gray-500 tracking-widest">
               <?php echo "@".$userid; ?>
@@ -68,10 +72,14 @@
                 <?php echo $phone." , ".$email; ?><br>
                 
               </div>
-              <form action="provide.php" method="post">
+              <form action="farmer.php" method="post">
                 <input type="text" name="quantity" id="quantity">
                 <input type="submit" value="Submit" class="flex-shrink-0 text-white bg-indigo-500 border-0 py-1 px-2 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-10 sm:mt-0">
               </form>
+              
+              
+             
+
             </div>
           </div>
         </div>
