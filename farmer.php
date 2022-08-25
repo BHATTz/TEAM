@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -112,12 +115,25 @@
                 <?php echo $phone." , ".$email; ?><br>
                 
               </div>
-              <form action="provide.php" method="post">
+              <form action="farmer.php" method="post">
                 <input type="text" name="quantity" id="quantity">
                 
-              <input type="submit" value="Submit" class="flex-shrink-0 text-white bg-indigo-500 border-0 py-1 px-2 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-10 sm:mt-0">
+              <input type="submit" name="submit" value="Submit" class="flex-shrink-0 text-white bg-indigo-500 border-0 py-1 px-2 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-10 sm:mt-0">
               
             </form>
+            <?php 
+              if(isset($_POST['submit']))
+              {
+                $quantity=$_POST['quantity'];
+                $_SESSION['quantity'] = $quantity;
+                $_SESSION['srno'] = $i;
+                ?>
+                <script>
+                  location.replace("provide.php");
+                </script>
+                <?php
+              }
+            ?>
                
             </div>
           </div>
@@ -128,14 +144,7 @@
           }
         }
     ?>
-       <?php
-       if(isset($_POST['submit']))
-       {
-        $quantity=$_POST['quantity']; 
-       }
-       
-       
-       ?>
+
     <!-- footer -->
 
     <?php include("include/footer.php"); ?>
