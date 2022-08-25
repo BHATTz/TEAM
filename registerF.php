@@ -71,8 +71,8 @@
                 >
                 <input
                   type="text"
-                  id="city"
-                  name="city"
+                  id="email"
+                  name="email"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -83,9 +83,9 @@
                   >Full address/PIN code:</label
                 >
                 <input
-                  type="email"
-                  id="email"
-                  name="email"
+                  type="textbox"
+                  id="address"
+                  name="address"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-24 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -130,12 +130,11 @@
         $name = $_POST['name'];
         $phone = $_POST['phone'];
         $state = $_POST['state'];
-        $city = $_POST['city'];
         $email = $_POST['email'];
-        $milk_qty = $_POST['milk_qty'];
+        $address = $_POST['address'];
         $user_id = $_POST['user_id'];
         $password = $_POST['password'];
-        $query = "insert into far(name,phone,state,city,email,qty,userid,password)values('$name','$phone','$state','$city','$email','$milk_qty','$user_id','$password')";
+        $query = "insert into far(name,phone,state,email,address,userid,password)values('$name','$phone','$state','$email','$address','$user_id','$password')";
         $fire=mysqli_query($con,$query);
         if($fire)
         {
