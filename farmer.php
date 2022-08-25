@@ -71,7 +71,7 @@
             
            
     ?>
-     <a href="provide.php?id=<?php echo $srno;?>"></a>
+     <a href="provide.php?id=<?php $srno;?>"></a>
     <!-- content -->   
     <section class="text-gray-600 body-font overflow-hidden">
       <div class="container px-5 py-24 mx-auto">
@@ -112,11 +112,13 @@
                 <?php echo $phone." , ".$email; ?><br>
                 
               </div>
-              <form action="farmer.php" method="post">
+              <form action="provide.php" method="post">
                 <input type="text" name="quantity" id="quantity">
-                <input type="submit" value="Submit" class="flex-shrink-0 text-white bg-indigo-500 border-0 py-1 px-2 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-10 sm:mt-0">
-              </form>
-            
+                
+              <input type="submit" value="Submit" class="flex-shrink-0 text-white bg-indigo-500 border-0 py-1 px-2 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-10 sm:mt-0">
+              
+            </form>
+               
             </div>
           </div>
         </div>
@@ -126,7 +128,14 @@
           }
         }
     ?>
-
+       <?php
+       if(isset($_POST['submit']))
+       {
+        $quantity=$_POST['quantity']; 
+       }
+       
+       
+       ?>
     <!-- footer -->
 
     <?php include("include/footer.php"); ?>

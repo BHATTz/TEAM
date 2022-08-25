@@ -1,4 +1,9 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
+
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -16,9 +21,13 @@
     <!-- content -->
 
     <?php
+    error_reporting(0);
+    $userid = $_SESSION['username'];
     include("conn.php");
-      $user_search="select * from bus where userid='$userid'";
+    
+      $user_search="select * from far where userid='$userid'";
          $query=mysqli_query($con,$user_search);
+
         
         $user_count=mysqli_num_rows($query);
          if($user_count)
@@ -28,8 +37,10 @@
             $name = $details['name'];
             $phone = $details['phone'];
             $email = $details['email'];
+            $state = $details['state'];
             $city = $details['city'];
             $qty = $details['qty'];
+            $password = $details['password'];
     ?>
     <section class="text-gray-600 body-font">
       <div class="flex flex-col sm:flex-row mt-10">
@@ -82,7 +93,8 @@
                 <input
                   type="text"
                   id="name"
-                  name="<?php echo "$name";?>"
+                  name="name"
+                  value="<?php echo $name;?>"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -96,6 +108,7 @@
                   type="text"
                   id="phone"
                   name="phone"
+                  value="<?php echo $phone;?>"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -109,6 +122,7 @@
                   type="text"
                   id="state"
                   name="state"
+                  value="<?php echo $state;?>"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -122,6 +136,7 @@
                   type="text"
                   id="city"
                   name="city"
+                  value="<?php echo $city;?>"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -135,6 +150,7 @@
                   type="email"
                   id="email"
                   name="email"
+                  value="<?php echo $email;?>"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -148,6 +164,7 @@
                   type="text"
                   id="milk_qty"
                   name="milk_qty"
+                  value="<?php echo $qty;?>"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -161,6 +178,7 @@
                   type="text"
                   id="user_id"
                   name="user_id"
+                  value="<?php echo $userid;?>"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -174,6 +192,7 @@
                   type="password"
                   id="password"
                   name="password"
+                  value="<?php echo $password;?>"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
