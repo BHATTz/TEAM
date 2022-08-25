@@ -68,10 +68,10 @@
                 <?php echo $phone." , ".$email; ?><br>
                 
               </div>
-              <a href="provide.php">
-                <button class="flex-shrink-0 text-white bg-indigo-500 border-0 py-1 px-2 focus:outline-none       hover:bg-indigo-600 rounded text-lg mt-10 sm:mt-0">Provide
-                </button>
-              </a>
+              <form action="provide.php" method="post">
+                <input type="text" name="quantity" id="quantity">
+                <input type="submit" value="Submit" class="flex-shrink-0 text-white bg-indigo-500 border-0 py-1 px-2 focus:outline-none hover:bg-indigo-600 rounded text-lg mt-10 sm:mt-0">
+              </form>
             </div>
           </div>
         </div>

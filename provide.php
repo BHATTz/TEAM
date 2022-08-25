@@ -1,6 +1,11 @@
 <?php 
     include "conn.php";
-    
+    if(isset($_POST['submit']))
+    {
+        $quantity = $_POST['quantity'];
+        $user_search="select quantity from bus where srno='$srno'";
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
