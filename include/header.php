@@ -19,7 +19,7 @@
             <img src="img/photography.png" alt="logo" height="50" width="50"
           /></a>
           <span class="ml-3 text-xl"
-            ><a href="../index.php" class="active">YourDailydDairyCart</a></span
+            ><a href="index.php" class="active">YourDailydDairyCart</a></span
           >
         </a>
         <nav
