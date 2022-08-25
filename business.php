@@ -26,7 +26,7 @@
             $name = $details['name'];
             $phone = $details['phone'];
             $email = $details['email'];
-            $city = $details['city'];
+            $address = $details['address'];
             $qty = $details['qty'];
     ?>
 
@@ -47,11 +47,7 @@
               >
             </div>
             <p class="leading-relaxed mb-4">
-              Fam locavore kickstarter distillery. Mixtape chillwave tumeric
-              sriracha taximy chia microdosing tilde DIY. XOXO fam inxigo
-              juiceramps cornhole raw denim forage brooklyn. Everyday carry +1
-              seitan poutine tumeric. Gastropub blue bottle austin listicle
-              pour-over, neutra jean.i 
+            <?php echo $address;?>
             </p>
             <div class="flex border-t border-gray-200 py-2 ">
               <span class="text-white ml-5">Dairy Animals</span>
@@ -63,7 +59,7 @@
             </div>
             <div class="flex">
               <span class="title-font font-medium text-3xl text-white-200"
-                ><?php echo $city;?></span
+                ></span
               >
               <div class="flex ml-auto text-white border-0 py-2 px-6">
               <?php echo $phone." , ".$email;?>
