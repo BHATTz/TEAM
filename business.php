@@ -60,7 +60,7 @@
     include("conn.php");
     if($con)
     {
-      $search = "SELECT * from far";
+      $search = "SELECT * from bus";
       $query = mysqli_query($con,$search);
         
         $user_count = mysqli_num_rows($query);
@@ -106,7 +106,7 @@
                 ></span
               >
               <div class="flex ml-auto text-white border-0 py-2 px-6">
-              <?php echo $phone." , ".$email;?>
+              <?php echo $email." , ".$phone;?>
                 </div>
             </div>
           </div>
