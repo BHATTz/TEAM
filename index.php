@@ -17,34 +17,31 @@
     <!-- content -->
 
     <header class="header">
-      <section class="text-gray-600 body-font overflow-hidden">
-        <div class="container px-40 py-52 mx-auto">
-          <div class="flex flex-wrap -m-12">
-            <div class="p-12 md:w-1/2 flex flex-col items-start">
-              <span class="inline-block py-1 px-2 rounded bg-indigo-200 text-black text-2xl font-medium tracking-widest">"I WANT MY MILK"</span>
-              <br>
-              <p class="leading-relaxed mb-8 text-white text-lg font-serif">“Do what you love to do, and be around things that make you smile. The cows make me smile every day.” </p>
-              <div class="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-100 mt-auto w-full">
-              
-                <a class="text-indigo-500 inline-flex items-center text-2xl "href="#p1">Lets Go
+
+    <section class="text-gray-600 body-font overflow-hidden">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap -m-12">
+      <div class="p-12 md:w-1/2 flex flex-col items-start">
+      <span class="inline-block py-1 px-2 rounded bg-indigo-200 text-black text-2xl font-medium tracking-widest">"I WANT MY MILK"</span>
+        <br><br>
+        <p class="leading-relaxed mb-8 text-white text-lg font-serif">“Do what you love to do, and be around things that make you smile. The cows make me smile every day.” </p>
+        <div class="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-100 mt-auto w-full">
+        <a class="text-indigo-500 inline-flex items-center text-2xl "href="#p1">Lets Go
                   <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M5 12h14"></path>
                     <path d="M12 5l7 7-7 7"></path>
                   </svg>
                 </a>
-                </span>
-              </div>
-              <a class="inline-flex items-center">
-                <img alt="blog" src="img/photography.png" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
-                <span class="flex-grow flex flex-col pl-4">
+        </div>
+        <a class="inline-flex items-center">
+          <img alt="blog" src="img/photography.png" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
+          <span class="flex-grow flex flex-col pl-4">
                   <span class="title-font font-medium text-gray-100 text-xl ">YourDailydDairyCart</span>
                   <span class="text-gray-200 text-base tracking-widest mt-0.5">© 2022 SGGS Team 3</span>
                 </span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+        </a>
+      </div>
+</section>
     </header>
 
 <header class="header1"id="p1"></header>

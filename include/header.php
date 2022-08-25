@@ -10,7 +10,7 @@
     
 <header class="text-gray-400 bg-gray-900 body-font">
       <div
-        class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+        class="container mx-auto flex flex-wrap p-1 flex-col md:flex-row items-center"
       >
         <a
           class="flex title-font font-serif items-center text-white mb-4 md:mb-0"
