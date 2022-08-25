@@ -132,7 +132,7 @@
           ?>
           <script>
               
-             location.replace("dbfarmer.php");
+             location.replace("farmer.php");
           </script>
           <?php
         }
