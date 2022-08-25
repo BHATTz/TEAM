@@ -112,7 +112,7 @@ session_start();
            <script>
           
             
-               location.replace("dbfarmer.php");
+               location.replace("business.php");
            </script>
            <?php
          }

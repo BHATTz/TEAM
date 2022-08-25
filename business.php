@@ -32,7 +32,7 @@
           <button
           class="font-serif inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0"
         >
-          <a href="#">Profile</a>
+          <a href="dbbusiness.php">Profile</a>
         </nav>
         &nbsp;&nbsp;
 
@@ -72,7 +72,6 @@
             $phone = $details['phone'];
             $email = $details['email'];
             $address = $details['address'];
-            $qty = $details['qty'];
     ?>
 
     <section class="text-gray-600 body-font overflow-hidden">
@@ -100,7 +99,7 @@
             </div>
             <div class="flex border-t border-b mb-6 border-gray-200 py-2 ">
               <span class="text-white ml-5">Product Quantity</span>
-              <span class="ml-auto text-gray-100 mr-5"> <?php echo $qty;?> KG</span>
+              <span class="ml-auto text-gray-100 mr-5"> KG</span>
             </div>
             <div class="flex">
               <span class="title-font font-medium text-3xl text-white-200"
