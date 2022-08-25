@@ -1,48 +1,48 @@
 /************** BG image ***************/
 .header {
-  min-height: 100vh;
+  min-height: 90vh;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("img/B1.jpg") center/cover no-repeat;
   color: #fff;
 }
 .header1 {
-  min-height: 100vh;
+  min-height: 90vh;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("img/B2.jpg") center/cover no-repeat;
   color: #fff;
 }
 .header2 {
-  min-height: 100vh;
+  min-height: 90vh;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("img/B3.jpg") center/cover no-repeat;
   color: #fff;
 }
 .header3 {
-  min-height: 100vh;
+  min-height: 90vh;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("img/B4.jpg") center/cover no-repeat;
   color: #fff;
 }
 .header4 {
-  min-height: 100vh;
+  min-height: 90vh;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("img/B5.jpg") center/cover no-repeat;
   color: #fff;
 }
 .header5 {
-  min-height: 100vh;
+  min-height: 90vh;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("img/B6.jpg") center/cover no-repeat;
   color: #fff;
 }
 .header6 {
-  min-height: 100vh;
+  min-height: 90vh;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("img/B7.jpg") center/cover no-repeat;
   color: #fff;
 }
 .header7 {
-  min-height: 100vh;
+  min-height: 90vh;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("img/B8.jpg") center/cover no-repeat;
   color: #fff;
