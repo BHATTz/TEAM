@@ -54,7 +54,7 @@
             <div class="p-2 w-1/2">
               <div class="relative">
                 <label for="state" class="leading-7 text-base text-gray-300"
-                  >State/City:</label
+                  >Email Id:</label
                 >
                 <input
                   type="text"
@@ -68,7 +68,7 @@
             <div class="p-2 w-1/2">
               <div class="relative">
                 <label for="email" class="leading-7 text-base text-gray-300"
-                  >Email Id:</label
+                  >Production address/PIN code/State:</label
                 >
                 <input
                   type="email"
@@ -81,7 +81,7 @@
             <div class="p-2 w-1/2">
               <div class="relative">
                 <label for="milk_qty" class="leading-7 text-base text-gray-300"
-                  >required Qty:</label
+                  >Required Qty:</label
                 >
                 <input
                   type="text"
@@ -94,7 +94,7 @@
             <div class="p-2 w-1/2">
               <div class="relative">
                 <label for="price" class="leading-7 text-base text-gray-300"
-                  >Price/kg:</label
+                  >Fixed Price/kg:</label
                 >
                 <input
                   type="text"
