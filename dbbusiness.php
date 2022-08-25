@@ -19,29 +19,48 @@ session_start();
     <?php include("include/header.php"); ?>
 
     <!-- content -->
-
     <?php
     error_reporting(0);
-    $userid = $_SESSION['username'];
+    $userid = $_SESSION['user'];
+    echo $userid;
     include("conn.php");
     
-      $user_search="select * from far where userid='$userid'";
+  
+         $user_search="select * from far where userid='$userid'";
          $query=mysqli_query($con,$user_search);
 
         
-        $user_count=mysqli_num_rows($query);
-         if($user_count)
-         {
-            $details = mysqli_fetch_assoc($query);
-            $userid = $details['userid'];
-            $name = $details['name'];
-            $phone = $details['phone'];
-            $email = $details['email'];
-            $state = $details['state'];
-            $city = $details['city'];
-            $qty = $details['qty'];
-            $password = $details['password'];
+        $array=mysqli_fetch_array($query);
+         if(isset($_POST['submit']))
+         {    
+        
+          $name = $_POST['name'];
+          $phone = $_POST['phone'];
+            $state = $_POST['state'];
+            $email = $_POST['email'];
+            $address =$_POST['address'];
+            $userid = $_POST['userid'];
+            $password = $_POST['password'];
+            $update="update far set name='$name',phone='$phone',state='$state',email='$email',address='$address',userid='$userid',password='$password' where srno=$srno";
+             $fire=mysqli_query($con,$update);
+             if($fire)
+             {
+               ?>
+               <script>
+                   location.replace("updated successfully");
+                </script>
+               <?php
+             }else{
+               ?>
+               <script>
+                   alert("data not inserted successfully");
+               </script>
+               <?php
+             }
+            }
+            
     ?>
+  
     <section class="text-gray-600 body-font">
       <div class="flex flex-col sm:flex-row mt-10">
      
@@ -54,6 +73,7 @@ session_start();
               <circle cx="12" cy="7" r="4"></circle>
             </svg>
           </div>
+        
           <div class="flex flex-col items-center text-center justify-center">
             <h2 class="font-medium title-font mt-4 text-gray-900 text-lg">Phoebe Caulfield</h2>
             <div class="p-2 w-full">
@@ -66,7 +86,7 @@ session_start();
           <br><br>
           <a href="business.php">
           <div class="p-2 w-full">
-             <input type="submit" name="submit" value="Available companies" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+             <input type="submit" name="submit" value="Available Farmers" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
             </div> 
           </a>
           </div>
@@ -76,10 +96,10 @@ session_start();
           <h1
             class="sm:text-3xl text-2xl font-medium title-font mb-2 text-blue-200"
           >
-            Register As Farmer
+            Registered Data
           </h1>
         </div>
-        <form method="post" action="registerF.php">
+        <form method="POST" action="dbfarmer.php">
         <div class="lg:w-1/2 md:w-2/3 mx-auto">
           <div class="flex flex-wrap -m-2">
             <div class="p-2 w-1/2">
@@ -91,6 +111,7 @@ session_start();
                   type="text"
                   id="name"
                   name="name"
+                  value="<?php echo $array['name'];?>"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -104,6 +125,7 @@ session_start();
                   type="text"
                   id="phone"
                   name="phone"
+                  value="<?php echo $array['phone'];?>"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -117,6 +139,7 @@ session_start();
                   type="text"
                   id="state"
                   name="state"
+                  value="<?php echo $array['state'];?>"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -130,6 +153,7 @@ session_start();
                   type="text"
                   id="email"
                   name="email"
+                  value="<?php echo $array['email'];?>"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -143,6 +167,7 @@ session_start();
                   type="textbox"
                   id="address"
                   name="address"
+                  value="<?php echo $array['address'];?>"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-24 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -154,8 +179,9 @@ session_start();
                 >
                 <input
                   type="text"
-                  id="user_id"
-                  name="user_id"
+                  id="userid"
+                  name="userid"
+                  value="<?php echo $array['userid'];?>"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -169,21 +195,152 @@ session_start();
                   type="password"
                   id="password"
                   name="password"
+                  value="<?php echo $array['password'];?>"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
             </div>
             <div class="p-2 w-full"></div>
-            <div class="p-2 w-full">
-              <input type="submit" name="submit" value="Submit" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+            <div class="p-2 w-1/2">
+              <div class="relative">
+                <label for="state" class="leading-7 text-base text-gray-300"
+                  >Total Quantity:</label
+                >
+                <input
+                  type="text"
+                  id="quantity"
+                  name="quantity"
+                  value="<?php echo $array['state'];?>"
+                  class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                />
+              </div>
+            </div>
+            <div class="p-2 w-1/2">
+              <div class="relative">
+                <label for="pincode" class="leading-7 text-base text-gray-300"
+                  >Per Liter Price:</label
+                >
+                <input
+                  type="text"
+                  id="price"
+                  name="price"
+                  value="<?php echo $array['email'];?>"
+                  class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                />
+              </div>
             </div>
           </div>
         </div>
+
+        <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-col text-center w-full mb-8">
+          <h1
+            class="sm:text-3xl text-2xl font-medium title-font mb-2 text-blue-200"
+          >
+            Update Feild
+          </h1>
+        </div>
+        <form method="POST" action="dbfarmer.php">
+        <div class="lg:w-1/2 md:w-2/3 mx-auto">
+          <div class="flex flex-wrap -m-2">
+            <div class="p-2 w-1/2">
+              <div class="relative">
+                <label for="name" class="leading-7 text-base text-gray-300"
+                  >Email Id:</label
+                >
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  value="<?php echo $array['name'];?>"
+                  class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                />
+              </div>
+            </div>
+            <div class="p-2 w-1/2">
+              <div class="relative">
+                <label for="phone" class="leading-7 text-base text-gray-300"
+                  >Phone Number:</label
+                >
+                <input
+                  type="text"
+                  id="phone"
+                  name="phone"
+                  value="<?php echo $array['phone'];?>"
+                  class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                />
+              </div>
+            </div>
+            <div class="p-10 w-2/2">
+              <div class="relative">
+                <label for="email" class="leading-7 text-base text-gray-300"
+                  >Full address/PIN code:</label
+                >
+                <input
+                  type="textbox"
+                  id="address"
+                  name="address"
+                  value="<?php echo $array['address'];?>"
+                  class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-24 leading-8 transition-colors duration-200 ease-in-out"
+                />
+              </div>
+            </div>
+            <div class="p-6 w-2/2">
+              <div class="relative">
+                <label for="email" class="leading-7 text-base text-gray-300"
+                  >Password:</label
+                >
+                <input
+                  type="Password"
+                  id="Password"
+                  name="Password"
+                  value="<?php echo $array['address'];?>"
+                  class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-24 leading-8 transition-colors duration-200 ease-in-out"
+                />
+              </div>
+            </div>
+
+            <div class="p-2 w-1/2">
+              <div class="relative">
+                <label for="state" class="leading-7 text-base text-gray-300"
+                  >Total Quantity:</label
+                >
+                <input
+                  type="text"
+                  id="quantity"
+                  name="quantity"
+                  value="<?php echo $array['state'];?>"
+                  class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                />
+              </div>
+            </div>
+            <div class="p-2 w-1/2">
+              <div class="relative">
+                <label for="pincode" class="leading-7 text-base text-gray-300"
+                  >Per Liter Price:</label
+                >
+                <input
+                  type="text"
+                  id="price"
+                  name="price"
+                  value="<?php echo $array['email'];?>"
+                  class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                />
+              </div>
+            </div>
+  
+            <div class="p-2 w-full"></div>
+            <div class="p-2 w-full">
+              <input type="submit" name="submit" value="update" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+            </div>
+          </div>
+        </div>
+
         </form>
        </section> 
-       <?php 
-        }
-    ?>
+       
+        
+  
  
  <!-- footer -->
 

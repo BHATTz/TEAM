@@ -60,7 +60,7 @@
     include("conn.php");
     if($con)
     {
-      $search = "SELECT * from bus";
+      $search = "SELECT * from far";
       $query = mysqli_query($con,$search);
         
         $user_count = mysqli_num_rows($query);
@@ -87,7 +87,7 @@
             </h1>
             <div class="flex mb-4">
               <a class="flex-grow border-b-2 border-gray-100 py-2 text-lg px-1"
-                >Information</a
+                >Address</a
               >
             </div>
             <p class="leading-relaxed mb-4">
@@ -98,7 +98,7 @@
               <span class="ml-auto text-gray-100 mr-5">Cows</span>
             </div>
             <div class="flex border-t border-b mb-6 border-gray-200 py-2 ">
-              <span class="text-white ml-5">Product Quantity</span>
+              <span class="text-white ml-5">Per Day Production</span>
               <span class="ml-auto text-gray-100 mr-5"> KG</span>
             </div>
             <div class="flex">
@@ -106,7 +106,10 @@
                 ></span
               >
               <div class="flex ml-auto text-white border-0 py-2 px-6">
-              <?php echo $email." , ".$phone;?>
+              <a href="tel:<?php echo $phone.","?>"><?php echo $phone.""?></a>
+              &nbsp;&nbsp;
+                <a href="mailto:<?php echo $email.","?>"><?php echo $email.""?></a>
+ 
                 </div>
             </div>
           </div>
