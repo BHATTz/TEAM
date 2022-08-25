@@ -100,11 +100,11 @@
             </div>
             <div class="flex border-t border-b mb-6 border-gray-200 py-2">
               <span class="text-white ml-5">Quantity Required</span>
-              <span class="ml-auto text-gray-100 mr-5"><?php echo $qty; ?> KG</span>
+              <span class="ml-auto text-gray-100 mr-5"> KG</span>
             </div>
             <div class="flex">
               <span class="title-font font-medium text-3xl text-white-200"
-                >&#8377;<?php echo $price; ?></span
+                >&#8377;</span
               >
               <div class="flex ml-auto text-white border-0 py-2 px-6">
                 <?php echo $phone." , ".$email; ?><br>
