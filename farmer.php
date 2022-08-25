@@ -65,8 +65,6 @@
             $name = $details['name'];
             $phone = $details['phone'];
             $email = $details['email'];
-            $price = $details['price'];
-            $qty = $details['qty'];
             $srno = $details['srno'];
             
            
