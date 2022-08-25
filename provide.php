@@ -2,8 +2,9 @@
     include "conn.php";
     
     
-        $quantity = $_POST['srno'];
-        echo "$quantity";
+        echo $_POST["quantity"];
+        echo $_POST['id'];
+        
 
 
 ?>

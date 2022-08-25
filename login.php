@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -82,12 +86,14 @@
       </div>
       </form>
       <?php
+      
      include 'conn.php';
      if(isset($_POST['submit']))
      {
          $userid = $_POST['userid'];
          $password = $_POST['password'];
          $option = $_POST['opt'];
+         $_SESSION['username']= $userid;
          switch($option)
          {
           case "business":
@@ -98,12 +104,15 @@
          if($user_count)
          {
            $user_pass=mysqli_fetch_assoc($query);
+           
            $db_pass=$user_pass['password'];
          if($password===$db_pass)
          {
           ?>
            <script>
-               location.replace("business.php");
+          
+            
+               location.replace("dbfarmer.php");
            </script>
            <?php
          }
