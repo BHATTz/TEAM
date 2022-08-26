@@ -122,6 +122,8 @@ session_start();
             <div class="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div>
             <p class="text-base"><?php echo"$name";?></p>
             <p class="text-base"><?php echo "@".$userid;?></p>
+            <p class="text-base"><?php echo "Required Quantity in litre:".$qty;?></p>
+            <p class="text-base"><?php echo "Per Litre Price:".$price;?></p>
           </div>
           <br><br>
           <a href="supplier.php">

@@ -72,6 +72,8 @@
             $phone = $details['phone'];
             $email = $details['email'];
             $address = $details['address'];
+            $qty = $details['qty'];
+            $price = $details['price'];
     ?>
 
     <section class="text-gray-600 body-font overflow-hidden">
@@ -99,8 +101,12 @@
             </div>
             <div class="flex border-t border-b mb-6 border-gray-200 py-2 ">
               <span class="text-white ml-5">Per Day Production</span>
-              <span class="ml-auto text-gray-100 mr-5"> KG</span>
+              <span class="ml-auto text-gray-100 mr-5"><?php echo $qty.  "ltr."?></span>
             </div>
+            <div class="flex">
+              <span class="title-font font-medium text-3xl text-white-200"
+                >&#8377;<?php echo $price;?></span
+              ></div>
             <div class="flex">
               <span class="title-font font-medium text-3xl text-white-200"
                 ></span

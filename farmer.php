@@ -72,8 +72,10 @@ session_start();
             $userid = $details['userid'];
             $name = $details['name'];
             $phone = $details['phone'];
-            $email = $details['email'];            
-           
+            $email = $details['email']; 
+            $qty= $details['qty'];           
+            $price= $details['price'];
+            $address= $details['address'];
     ?>
     <!-- content -->   
     <section class="text-gray-600 body-font overflow-hidden">
@@ -92,23 +94,19 @@ session_start();
               >
             </div>
             <p class="leading-relaxed mb-4">
-              Fam locavore kickstarter distillery. Mixtape chillwave tumeric
-              sriracha taximy chia microdosing tilde DIY. XOXO fam inxigo
-              juiceramps cornhole raw denim forage brooklyn. Everyday carry +1
-              seitan poutine tumeric. Gastropub blue bottle austin listicle
-              pour-over, neutra jean.
+             <?php echo $address;?>
             </p>
             <div class="flex border-t border-gray-200 py-2">
-              <span class="text-white ml-5">Particular animals</span>
-              <span class="ml-auto text-gray-100 mr-5">Cows Milk</span>
+              <span class="text-white ml-5">Animals milk</span>
+              <span class="ml-auto text-gray-100 mr-5">Cows Milk/buffalo milk</span>
             </div>
             <div class="flex border-t border-b mb-6 border-gray-200 py-2">
               <span class="text-white ml-5">Quantity Required</span>
-              <span class="ml-auto text-gray-100 mr-5"> KG</span>
+              <span class="ml-auto text-gray-100 mr-5"><?php echo $qty. "ltr."?></span>
             </div>
             <div class="flex">
               <span class="title-font font-medium text-3xl text-white-200"
-                >&#8377;</span
+                >&#8377;<?php echo $price;?></span
               >
               <div class="flex ml-auto text-white border-0 py-2 px-6">
                  <a href="tel:<?php echo $phone.""?>"><?php echo $phone.","?></a>
