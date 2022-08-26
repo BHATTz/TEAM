@@ -28,6 +28,7 @@
           <a class="mr-5 hover:text-white"href="aboutus.php">About Us</a>
           <a class="mr-5 hover:text-white"href="tips.php">Tips</a>
           <a class="mr-5 hover:text-white"href="team.php">Team</a>
+          <a class="mr-5 hover:text-white"href="admin">Admin Login</a>
         </nav>
 
         <button

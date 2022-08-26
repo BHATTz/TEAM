@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>loc</title>
+
+    </head>
+    <button onclick="getLocation()">Getlocation</button>
+    <div id="output"></div>
+    <script  src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script>
+  var x = document.getElementById('output');
+  function getLocation(){
+    if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(showPosition,showErr);
+    }
+    else{
+        x.innerHTML="BROWSER NOT SUPPORTED";
+
+    } 
+    }
+  function showPosition(position) {
+x.innerHTML ="latitude ="+position.coords.latitude;
+    x.innerHTML +="<br/>"
+    x.innerHTML +="longitude ="+position.coords.longitude;
+
+    
+  }
+ // x.innerHTML= locAPI;
+   
+ function showErr(error) {  
+              switch(error.code){  
+              case error.PERMISSION_DENIED:  
+             alert("User denied the request for Geolocation API.");  
+              break;  
+             case error.POSITION_UNAVAILABLE:  
+             alert("USer location information is unavailable.");  
+            break;  
+            case error.TIMEOUT:  
+            alert("The request to get user location timed out.");  
+            break;  
+           case error.UNKNOWN_ERROR:  
+            alert("An unknown error occurred.");  
+            break;  
+ }}
+</script>
+
+</html>
