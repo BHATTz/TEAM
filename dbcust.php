@@ -65,7 +65,7 @@ session_start();
     include("conn.php");
     
   
-         $user_search="select * from bus where userid='$userid'";
+         $user_search="select * from cust where userid='$userid'";
          $query=mysqli_query($con,$user_search);
 
         
@@ -80,8 +80,8 @@ session_start();
             $userid = $_POST['userid'];
             $password = $_POST['password'];
             $qty = $_POST['qty'];
-            $price= $_POST['price'];
-            $update="update bus set name='$name',phone='$phone',email='$email',address='$address',userid='$userid',password='$password',qty='$qty',price='$price' where userid='$userid'";
+            $animal= $_POST['animal'];
+            $update="update cust set name='$name',phone='$phone',email='$email',address='$address',userid='$userid',password='$password',qty='$qty',animal='$animal' where userid='$userid'";
              $fire=mysqli_query($con,$update);
              if($fire)
              {
@@ -123,7 +123,7 @@ session_start();
             <p class="text-base"><?php echo"$name";?></p>
             <p class="text-base"><?php echo "@".$userid;?></p>
             <p class="text-base"><?php echo "Required Quantity in litre:".$qty;?></p>
-            <p class="text-base"><?php echo "Per Litre Price:".$price;?></p>
+            <p class="text-base"><?php echo "Particular animal milk:".$animal;?></p>
           </div>
           <br><br>
           <a href="supplier.php">
@@ -246,7 +246,7 @@ session_start();
             <div class="p-2 w-1/2">
               <div class="relative">
                 <label for="pincode" class="leading-7 text-base text-gray-300"
-                  >Per Liter Price:</label
+                  >Particular animal milk:</label
                 >
                 <input
                   type="text"

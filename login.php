@@ -54,8 +54,10 @@ session_start();
               class="w-full bg-gray-300 rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             >
             <option value="#">Select</option>
-            <option value="farmer">farmer</option>
-            <option value="business">business</option>
+            <option value="farmer">Farmer</option>
+            <option value="Customer">Custumer</option>
+            <option value="business">Business</option>
+            <option value="Admin">Admin</option>
              </select>
             </div>
           <div class="relative mb-4">
@@ -99,7 +101,7 @@ session_start();
          
          switch($option)
          {
-          case "business":
+          case "Business":
          $user_search="select * from bus where userid='$userid'";
          $query=mysqli_query($con,$user_search);
         
@@ -135,7 +137,79 @@ session_start();
            <?php
         }
       break;
-      case "farmer":
+      case "Farmer":
+        $user_search="select * from far where userid='$userid' ";
+        $query=mysqli_query($con,$user_search);
+       
+       $user_count=mysqli_num_rows($query);
+        if($user_count)
+        {
+          $user_pass=mysqli_fetch_assoc($query);
+          $db_pass=$user_pass['password'];
+          
+          
+        if($password===$db_pass)
+        {
+          ?>
+          <script>
+              
+             location.replace("farmer.php");
+          </script>
+          <?php
+        }
+        else{
+         ?>
+         <script>
+         alert("incorrect password");
+         </script>
+         <?php
+        }
+       }else{
+         ?>
+          <script>
+              alert("invalid username");
+          </script>
+          <?php
+       }
+       break;
+
+      case "Customer":
+        $user_search="select * from far where userid='$userid' ";
+        $query=mysqli_query($con,$user_search);
+       
+       $user_count=mysqli_num_rows($query);
+        if($user_count)
+        {
+          $user_pass=mysqli_fetch_assoc($query);
+          $db_pass=$user_pass['password'];
+          
+          
+        if($password===$db_pass)
+        {
+          ?>
+          <script>
+              
+             location.replace("farmer.php");
+          </script>
+          <?php
+        }
+        else{
+         ?>
+         <script>
+         alert("incorrect password");
+         </script>
+         <?php
+        }
+       }else{
+         ?>
+          <script>
+              alert("invalid username");
+          </script>
+          <?php
+       }
+       break;
+       
+      case "Admin":
         $user_search="select * from far where userid='$userid' ";
         $query=mysqli_query($con,$user_search);
        

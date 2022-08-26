@@ -62,7 +62,7 @@ session_start();
     include("conn.php");
     if($con)
     {
-      $search = "SELECT * from bus";
+      $search = "SELECT * from cust";
       $query = mysqli_query($con,$search);
         
         $user_count = mysqli_num_rows($query);
