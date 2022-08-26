@@ -75,20 +75,19 @@ session_start();
         
           $name = $_POST['name'];
           $phone = $_POST['phone'];
-            $state = $_POST['state'];
             $email = $_POST['email'];
             $address =$_POST['address'];
             $userid = $_POST['userid'];
             $password = $_POST['password'];
             $qty = $_POST['qty'];
             $price= $_POST['price'];
-            $update="update far set name='$name',phone='$phone',state='$state',email='$email',address='$address',userid='$userid',password='$password'qty='$qty' price='price' where srno=$srno";
+            $update="update bus set name='$name',phone='$phone',email='$email',address='$address',userid='$userid',password='$password',qty='$qty',price='$price' where userid='$userid'";
              $fire=mysqli_query($con,$update);
              if($fire)
              {
                ?>
                <script>
-                   location.replace("updated successfully");
+                   alert("updated successfully");
                 </script>
                <?php
              }else{
@@ -140,7 +139,7 @@ session_start();
             Registered Data
           </h1>
         </div>
-        <form method="POST" action="dbfarmer.php">
+        <form method="POST" action="dbbusiness.php">
         <div class="lg:w-1/2 md:w-2/3 mx-auto">
           <div class="flex flex-wrap -m-2">
             <div class="p-2 w-1/2">
@@ -235,9 +234,9 @@ session_start();
                 >
                 <input
                   type="text"
-                  id="quantity"
-                  name="quantity"
-                  value="<?php echo $array['quantity'];?>"
+                  id="qty"
+                  name="qty"
+                  value="<?php echo $array['qty'];?>"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
