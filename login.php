@@ -55,9 +55,8 @@ session_start();
             >
             <option value="#">Select</option>
             <option value="farmer">Farmer</option>
-            <option value="Customer">Custumer</option>
             <option value="business">Business</option>
-            <option value="Admin">Admin</option>
+            
              </select>
             </div>
           <div class="relative mb-4">
@@ -100,7 +99,7 @@ session_start();
          
          switch($option)
          {
-          case "Business":
+          case "business":
          $user_search="select * from bus where userid='$userid'";
          $query=mysqli_query($con,$user_search);
         
@@ -136,7 +135,7 @@ session_start();
            <?php
         }
       break;
-      case "Farmer":
+      case "farmer":
         $user_search="select * from far where userid='$userid' ";
         $query=mysqli_query($con,$user_search);
        
@@ -169,78 +168,7 @@ session_start();
               alert("invalid username");
           </script>
           <?php
-       }
-       break;
 
-      case "Customer":
-        $user_search="select * from far where userid='$userid' ";
-        $query=mysqli_query($con,$user_search);
-       
-       $user_count=mysqli_num_rows($query);
-        if($user_count)
-        {
-          $user_pass=mysqli_fetch_assoc($query);
-          $db_pass=$user_pass['password'];
-          
-          
-        if($password===$db_pass)
-        {
-          ?>
-          <script>
-              
-             location.replace("farmer.php");
-          </script>
-          <?php
-        }
-        else{
-         ?>
-         <script>
-         alert("incorrect password");
-         </script>
-         <?php
-        }
-       }else{
-         ?>
-          <script>
-              alert("invalid username");
-          </script>
-          <?php
-       }
-       break;
-       
-      case "Admin":
-        $user_search="select * from far where userid='$userid' ";
-        $query=mysqli_query($con,$user_search);
-       
-       $user_count=mysqli_num_rows($query);
-        if($user_count)
-        {
-          $user_pass=mysqli_fetch_assoc($query);
-          $db_pass=$user_pass['password'];
-          
-          
-        if($password===$db_pass)
-        {
-          ?>
-          <script>
-              
-             location.replace("farmer.php");
-          </script>
-          <?php
-        }
-        else{
-         ?>
-         <script>
-         alert("incorrect password");
-         </script>
-         <?php
-        }
-       }else{
-         ?>
-          <script>
-              alert("invalid username");
-          </script>
-          <?php
        }
        break;
       }
