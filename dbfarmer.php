@@ -217,6 +217,34 @@ session_start();
                 />
               </div>
             </div>
+            <div class="p-2 w-1/2">
+              <div class="relative">
+                <label for="user_id" class="leading-7 text-base text-gray-300"
+                  >User Id:</label
+                >
+                <input
+                  type="text"
+                  id="userid"
+                  name="userid"
+                  value="<?php echo $array['userid'];?>"
+                  class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                />
+              </div>
+            </div>
+            <div class="p-2 w-1/2">
+              <div class="relative">
+                <label for="password" class="leading-7 text-base text-gray-300"
+                  >Password:</label
+                >
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  value="<?php echo $array['password'];?>"
+                  class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                />
+              </div>
+            </div>
             <div class="p-2 w-full"></div>
             <div class="p-2 w-1/2">
               <div class="relative">
