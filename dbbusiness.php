@@ -65,7 +65,7 @@ session_start();
     include("conn.php");
     
   
-         $user_search="select * from far where userid='$userid'";
+         $user_search="select * from bus where userid='$userid'";
          $query=mysqli_query($con,$user_search);
 
         
@@ -80,7 +80,9 @@ session_start();
             $address =$_POST['address'];
             $userid = $_POST['userid'];
             $password = $_POST['password'];
-            $update="update far set name='$name',phone='$phone',state='$state',email='$email',address='$address',userid='$userid',password='$password' where srno=$srno";
+            $qty = $_POST['qty'];
+            $price= $_POST['price'];
+            $update="update far set name='$name',phone='$phone',state='$state',email='$email',address='$address',userid='$userid',password='$password'qty='$qty' price='price' where srno=$srno";
              $fire=mysqli_query($con,$update);
              if($fire)
              {
@@ -249,7 +251,7 @@ session_start();
                   type="text"
                   id="quantity"
                   name="quantity"
-                  value="<?php echo $array['state'];?>"
+                  value="<?php echo $array['quantity'];?>"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -263,7 +265,7 @@ session_start();
                   type="text"
                   id="price"
                   name="price"
-                  value="<?php echo $array['email'];?>"
+                  value="<?php echo $array['price'];?>"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
