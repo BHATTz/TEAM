@@ -19,7 +19,7 @@
           <h1
             class="sm:text-3xl text-2xl font-medium title-font mb-2 text-blue-200"
           >
-            Register As Business
+            Register As Customer
           </h1>
         </div>
         
@@ -85,8 +85,8 @@
                 >
                 <input
                   type="text"
-                  id="user_id"
-                  name="user_id"
+                  id="userid"
+                  name="userid"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -119,9 +119,9 @@
         $phone = $_POST['phone'];
         $email = $_POST['email'];
         $address = $_POST['address'];
-        $user_id = $_POST['user_id'];
+        $user_id = $_POST['userid'];
         $password = $_POST['password'];
-        $query = "insert into bus(name,phone,email,address,userid,password)values('$name','$phone','$email','$address','$user_id','$password')";
+        $query = "insert into cust(name,phone,email,address,userid,password)values('$name','$phone','$email','$address','$user_id','$password')";
         $fire=mysqli_query($con,$query);
         if($fire)
         {
