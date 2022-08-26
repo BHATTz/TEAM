@@ -116,7 +116,7 @@ session_start();
            <script>
           
             
-               location.replace("farmer.php");
+               location.replace("business.php");
            </script>
            <?php
          }
@@ -151,7 +151,7 @@ session_start();
           ?>
           <script>
               
-             location.replace("dbfarmer.php");
+             location.replace("farmer.php");
           </script>
           <?php
         }
