@@ -286,7 +286,7 @@ session_start();
             </div>
         </form>
         </div>
-        </form>
+
        </section> 
        
       
