@@ -217,39 +217,42 @@ session_start();
                 />
               </div>
             </div>
+            <div class="p-2 w-full"></div>
             <div class="p-2 w-1/2">
               <div class="relative">
-                <label for="user_id" class="leading-7 text-base text-gray-300"
-                  >User Id:</label
+                <label for="state" class="leading-7 text-base text-gray-300"
+                  >Total Quantity:</label
                 >
                 <input
                   type="text"
-                  id="userid"
-                  name="userid"
-                  value="<?php echo $userid;?>"
+                  id="quantity"
+                  name="quantity"
+                  value="<?php echo $array['quantity'];?>"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
             </div>
             <div class="p-2 w-1/2">
               <div class="relative">
-                <label for="password" class="leading-7 text-base text-gray-300"
-                  >Password:</label
+                <label for="pincode" class="leading-7 text-base text-gray-300"
+                  >Per Liter Price:</label
                 >
                 <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  value="<?php echo $array['password'];?>"
+                  type="text"
+                  id="price"
+                  name="price"
+                  value="<?php echo $array['price'];?>"
                   class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
             </div>
-            <div class="p-2 w-full"></div>
-            <div class="p-2 w-full">
+          </div>
+        </div>
+        <br>
+        <div class="p-2 w-full">
               <input type="submit" name="submit" value="update" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
             </div>
-          </div>
+        </form>
         </div>
         </form>
        </section> 
