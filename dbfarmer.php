@@ -16,7 +16,46 @@ session_start();
     
     <!-- header -->
 
-    <?php include("include/header.php"); ?>
+    <header class="text-gray-400 bg-gray-900 body-font">
+      <div
+        class="container mx-auto flex flex-wrap p-4 flex-col md:flex-row items-left"
+      >
+        <a
+          class="flex title-font font-serif items-center text-white mb-4 md:mb-0"
+        >
+          <a href="index.php" class="active">
+            <img src="img/photography.png" alt="logo" height="50" width="50"
+          /></a>
+          <span class="ml-3 text-xl"
+            ><a href="index.php" class="active">YourDailydDairyCart</a></span
+          >
+        </a>
+        <nav
+          class="md:ml-auto flex flex-wrap items-center text-base justify-center font-serif"
+        >
+          <a class="mr-5 hover:text-white"href="aboutus.php">About Us</a>
+          <a class="mr-5 hover:text-white"href="tips.php">Tips</a>
+          <a class="mr-5 hover:text-white"href="team.php">Team</a>
+        </nav>
+
+        <button
+          class="font-serif inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0"
+        >
+          <a href="farmer.php">Go Back</a>
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            class="w-4 h-4 ml-1"
+            viewBox="0 0 24 24"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
 
     <!-- content -->
     <?php
@@ -85,7 +124,7 @@ session_start();
             <p class="text-base"><?php echo "@".$userid;?></p>
           </div>
           <br><br>
-          <a href="business.php">
+          <a href="farmer.php">
           <div class="p-2 w-full">
              <input type="submit" name="submit" value="Available companies" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
             </div> 
@@ -97,7 +136,7 @@ session_start();
           <h1
             class="sm:text-3xl text-2xl font-medium title-font mb-2 text-blue-200"
           >
-            Register As Farmer
+            Farmer updation field
           </h1>
         </div>
         <form method="POST"action="dbfarmer.php">
@@ -208,7 +247,7 @@ session_start();
             </div>
             <div class="p-2 w-full"></div>
             <div class="p-2 w-full">
-              <input type="submit" name="submit" value="Submit" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+              <input type="submit" name="submit" value="update" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
             </div>
           </div>
         </div>
