@@ -270,116 +270,14 @@ session_start();
             </div>
           </div>
         </div>
-
-        <div class="container px-5 py-24 mx-auto">
-        <div class="flex flex-col text-center w-full mb-8">
-          <h1
-            class="sm:text-3xl text-2xl font-medium title-font mb-2 text-blue-200"
-          >
-            Update Feild
-          </h1>
-        </div>
-        <form method="POST" action="dbfarmer.php">
-        <div class="lg:w-1/2 md:w-2/3 mx-auto">
-          <div class="flex flex-wrap -m-2">
-            <div class="p-2 w-1/2">
-              <div class="relative">
-                <label for="name" class="leading-7 text-base text-gray-300"
-                  >Email Id:</label
-                >
-                <input
-                  type="text"
-                  id="email"
-                  name="email"
-                  value="<?php echo $array['name'];?>"
-                  class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                />
-              </div>
-            </div>
-            <div class="p-2 w-1/2">
-              <div class="relative">
-                <label for="phone" class="leading-7 text-base text-gray-300"
-                  >Phone Number:</label
-                >
-                <input
-                  type="text"
-                  id="phone"
-                  name="phone"
-                  value="<?php echo $array['phone'];?>"
-                  class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                />
-              </div>
-            </div>
-            <div class="p-10 w-2/2">
-              <div class="relative">
-                <label for="email" class="leading-7 text-base text-gray-300"
-                  >Full address/PIN code:</label
-                >
-                <input
-                  type="textbox"
-                  id="address"
-                  name="address"
-                  value="<?php echo $array['address'];?>"
-                  class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-24 leading-8 transition-colors duration-200 ease-in-out"
-                />
-              </div>
-            </div>
-            <div class="p-6 w-2/2">
-              <div class="relative">
-                <label for="email" class="leading-7 text-base text-gray-300"
-                  >Password:</label
-                >
-                <input
-                  type="Password"
-                  id="Password"
-                  name="Password"
-                  value="<?php echo $array['address'];?>"
-                  class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-24 leading-8 transition-colors duration-200 ease-in-out"
-                />
-              </div>
-            </div>
-
-            <div class="p-2 w-1/2">
-              <div class="relative">
-                <label for="state" class="leading-7 text-base text-gray-300"
-                  >Total Quantity:</label
-                >
-                <input
-                  type="text"
-                  id="quantity"
-                  name="quantity"
-                  value="<?php echo $array['state'];?>"
-                  class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                />
-              </div>
-            </div>
-            <div class="p-2 w-1/2">
-              <div class="relative">
-                <label for="pincode" class="leading-7 text-base text-gray-300"
-                  >Per Liter Price:</label
-                >
-                <input
-                  type="text"
-                  id="price"
-                  name="price"
-                  value="<?php echo $array['email'];?>"
-                  class="w-full bg-white-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                />
-              </div>
-            </div>
-  
-            <div class="p-2 w-full"></div>
-            <div class="p-2 w-full">
+        <br>
+        <div class="p-2 w-full">
               <input type="submit" name="submit" value="update" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
             </div>
-          </div>
-        </div>
-
         </form>
        </section> 
        
-        
-  
+       
  
  <!-- footer -->
 
